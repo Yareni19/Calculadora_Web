@@ -47,6 +47,7 @@
                     <div class="card-header">
                         <h1 class="text-center">.::Calculadora::.</h1>
                     </div>
+                    <!-- Formulario para ingresar los datos -->
                     <div class="card-body">
                         <form method="post">
                             <div class="form-group">
@@ -61,6 +62,7 @@
                                 <button type="submit" name="operacion" value="suma" class="btn btn-suma mr-2">Sumar</button>
                                 <button type="submit" name="operacion" value="resta" class="btn btn-resta">Restar</button>
                             </div>
+                            <!-- Metodos para realizar Suma y resta -->
                         </form>
                         <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
