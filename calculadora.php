@@ -31,6 +31,16 @@
             background-color: #5D92E9;
             border-color: #1868E9;
         }
+        .btn-multiplicacion {
+            background-color: #8061FF;
+            border-color: #6030EB;
+            color: white;
+        }
+        .btn-division {
+            background-color: #8361FF;
+            border-color: #6030EB;
+            color: white;
+        }
         .img-fluid {
             border-radius: 25px;
         }
@@ -61,6 +71,8 @@
                             <div class="form-group text-center">
                                 <button type="submit" name="operacion" value="suma" class="btn btn-suma mr-2">Sumar</button>
                                 <button type="submit" name="operacion" value="resta" class="btn btn-resta">Restar</button>
+                                <button type="submit" name="operacion" value="multiplicacion" class="btn btn-multiplicacion">Restar</button>
+                                <button type="submit" name="operacion" value="division" class="btn btn-division">Restar</button>
                             </div>
                             <!-- Metodos para realizar Suma y resta -->
                         </form>
@@ -78,6 +90,17 @@
                                 case 'resta':
                                     $resultado = $numero1 - $numero2;
                                     break;
+                                case 'multiplicacion':
+                                        $resultado = $numero1 * $numero2;
+                                        break;
+                                case 'division':
+                                    if ($numero2 != 0) {
+                                        $resultado = $numero1 / $numero2;
+                                    } else {
+                                        echo "<div class='alert alert-danger mt-3'>No se puede dividir por cero</div>";
+                                        exit();
+                                    }
+                                        break;
                                 default:
                                     echo "<div class='alert alert-danger mt-3'>Operación no válida</div>";
                                     exit();
